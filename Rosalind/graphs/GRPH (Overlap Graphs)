@@ -1,0 +1,55 @@
+'''
+Description: Построение графа перекрытий (Overlap Graph O_3).
+Связывает строки, если суффикс одной длиной k совпадает с префиксом другой.
+'''
+
+import sys
+
+def parse_fasta():
+    seqs = {}
+    name = ""
+    for line in sys.stdin:
+        line = line.strip()
+        if not line: continue
+        if line.startswith(">"):
+            name = line[1:]
+            seqs[name] = []
+        else:
+            seqs[name].append(line)
+    return {k: "".join(v) for k, v in seqs.items()}
+
+def solve(k=3):
+    data = parse_fasta()
+    names = list(data.keys())
+    
+    # Сравниваем каждую пару (i, j)
+    for i in names:
+        for j in names:
+            if i == j: continue
+            
+            suffix = data[i][-k:]
+            prefix = data[j][:k]
+            
+            if suffix == prefix:
+                print(f"{i} {j}")
+
+if __name__ == "__main__":
+    solve()
+
+'''
+Пример простого ввода:
+>Rosalind_0498
+АААТААА
+>Rosalind_2391
+AAATTTT
+>Rosalind_2323
+TTTTCCC
+>Rosalind_0442
+AAATCCC
+>Rosalind_5013
+GGGTGGG
+Пример простого вывода:
+Rosalind_0498 Rosalind_2391
+Rosalind_0498 Rosalind_0442
+Rosalind_2391 Rosalind_2323
+'''
