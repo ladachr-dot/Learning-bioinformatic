@@ -1,0 +1,39 @@
+'''
+Description: Код возвращает места нахождения нужного мотива в ДНК (отсчитывая от единицы).
+'''
+# 1 вариант
+
+s = input().strip()
+t = input().strip()
+
+count = []
+fnd = s.find(t)
+
+while fnd != -1:
+    count.append(str(fnd + 1))
+    fnd = s.find(t, fnd + 1)
+
+print(' '.join(count))
+
+# 2 вариант: Он не имеет смысла в данной задаче, так как работает медленнее 
+# и из-за re, и из-за '?=', но при поиске, предположим, неопределённых паттернов 
+# (где могут понадобиться регуляторные выражения) этот метод может пригодиться.
+
+import re
+
+sequence = input().strip()
+pattern = input().strip()
+
+matches = list(re.finditer(f'(?=({re.escape(pattern)}))', sequence))
+
+if matches:
+  positions = [str(m.start() + 1) for m in matches]
+  print(' '.join(positions))
+              
+'''
+В качестве простого примера ввода представлено:
+  GATATATGCATATACTT
+  ATAT
+В качестве простого примера вывода:
+  2 4 10
+'''
