@@ -1,0 +1,45 @@
+'''
+Description: Перевод последовательности РНК в белок (трансляция).
+Используется стандартная таблица генетического кода до достижения стоп-кодона.
+'''
+
+def translation():
+    s = input().strip()
+
+    genetic_code = {
+        'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L', 'CUU': 'L', 'CUC': 'L', 
+        'CUA': 'L', 'CUG': 'L', 'AUU': 'I', 'AUC': 'I', 'AUA': 'I', 'AUG': 'M',
+        'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V', 'UCU': 'S', 'UCC': 'S', 
+        'UCA': 'S', 'UCG': 'S', 'CCU': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P',
+        'ACU': 'T', 'ACC': 'T', 'ACA': 'T', 'ACG': 'T', 'GCU': 'A', 'GCC': 'A', 
+        'GCA': 'A', 'GCG': 'A', 'UAU': 'Y', 'UAC': 'Y', 'UAA': '*', 'UAG': '*', 
+        'UGA': '*', 'CAU': 'H', 'CAC': 'H', 'CAA': 'Q', 'CAG': 'Q', 'AAU': 'N', 
+        'AAC': 'N', 'AAA': 'K', 'AAG': 'K', 'GAU': 'D', 'GAC': 'D', 'GAA': 'E', 
+        'GAG': 'E', 'UGU': 'C', 'UGC': 'C', 'UGG': 'W', 'CGU': 'R', 'CGC': 'R', 
+        'CGA': 'R', 'CGG': 'R', 'AGU': 'S', 'AGC': 'S', 'AGA': 'R', 'AGG': 'R',
+        'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G'
+    }
+
+    res = []
+    # Начинаем поиск со старт-кодона AUG
+    start_pos = s.find('AUG')
+    if start_pos != -1:
+        for i in range(start_pos, len(s), 3):
+            codon = s[i:i+3]
+            if len(codon) < 3: break
+            
+            amino_acid = genetic_code.get(codon, '')
+            if amino_acid == '*': break # Стоп-кодон обрывает цепь
+            res.append(amino_acid)
+
+    print(''.join(res))
+
+if __name__ == "__main__":
+    translation()
+
+'''
+Пример простого ввода:
+  AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA
+Пример простого вывода:
+  MAMAPRTEINSTRING
+'''
