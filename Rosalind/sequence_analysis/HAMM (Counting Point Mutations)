@@ -1,0 +1,33 @@
+'''
+Description: Расчет расстояния Хэмминга между двумя строками ДНК.
+Расстояния Хэмминга — это количество позиций, в которых соответствующие символы различаются.
+'''
+import sys
+
+def HAMM():
+    # Читаем строки из ввода
+    input_data = sys.stdin.read().split()
+    if len(input_data) < 2:
+        return
+        
+    s = input_data[0]
+    t = input_data[1]
+
+    count = 0
+    # Проходим по индексам и сравниваем символы в одинаковых позициях
+    for i in range(len(s)):
+        if s[i] != t[i]:
+            count += 1
+
+    print(count)
+
+if __name__ == "__main__":
+    HAMM()
+
+'''
+В качестве простого примера ввода:
+  GAGCCTACTAACGGGAT
+  CATCGTAATGACGGCCT
+Пример вывода:
+  7
+'''
