@@ -4,6 +4,8 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Latest-orange)
 ![Bioinformatics](https://img.shields.io/badge/Bioinformatics-Pipeline-green)
 
+> Решение на Kaggle: https://www.kaggle.com/code/vladachern/gene-expression-cancer-rna-seq-solved/edit/run/297156476
+
 Проект по классификации типов опухолей на основе данных секвенирования РНК (RNA-Seq). Пайплайн включает в себя глубокий Feature Engineering и сравнение классических моделей ML с SOTA решениями (XGBoost, LightGBM, MLP).
 
 ### 📊 Описание данных
