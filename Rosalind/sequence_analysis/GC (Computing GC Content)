@@ -1,0 +1,58 @@
+'''
+Description: Поиск последовательности с самым высоким процентным содержанием GC-состава.
+GC-состав влияет на термостабильность ДНК, поэтому эта задача действительно имеет практическое применение.
+'''
+import sys
+
+def parse_fasta():
+    """Парсинг FASTA"""
+    sequences = {}
+    current_id = ""
+    for line in sys.stdin:
+        line = line.strip()
+        if not line: continue
+        if line.startswith(">"):
+            current_id = line[1:]
+            sequences[current_id] = []
+        else:
+            sequences[current_id].append(line)
+    return {lid: "".join(seq) for lid, seq in sequences.items()}
+
+def get_gc(dna):
+    """Вычисляет процент GC-состава."""
+    if not dna: return 0.0
+    gc_count = dna.count('G') + dna.count('C')
+    return (gc_count / len(dna)) * 100
+
+def calc():
+    data = parse_fasta()
+    max_id = ""
+    max_gc = -1.0
+
+    for lid, dna in data.items():
+        current_gc = get_gc(dna)
+        if current_gc > max_gc:
+            max_gc = current_gc
+            max_id = lid
+
+    print(max_id)
+    print(f"{max_gc:.6f}")
+
+if __name__ == "__main__":
+    calc()
+
+'''
+Пример простого ввода:
+  >Rosalind_6404
+  CCTGCGGAAGATCGGCACTAGAATAGCCAGAACCGTTTCTCTGAGGCTTCCGGCCTTCCC
+  TCCCACTAATAATTCTGAGG
+  >Rosalind_5959
+  CCATCGGTAGCGCATCCTTAGTCCAATTAAGTCCCTATCCAGGCGCTCCGCCGAAGGTCT
+  ATATCCATTTGTCAGCAGACACGC
+  >Rosalind_0808
+  CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGAC
+  TGGGAACCTGCGGGCAGTAGGTGGAAT
+Пример простого вывода:
+  Rosalind_0808
+  60.919540
+'''
