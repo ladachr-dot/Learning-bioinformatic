@@ -26,6 +26,8 @@
 
 ### 3. Sequence analysis (In Progress)
 
+**File:** `Sequence.ipynb`
+
 *  Найти схожие мотивы среди sequence в датасете
 *  Построить similarity matrix между аптамерами
 *  Выполнить clustering sequence, чтобы найти группы сходных мотивов
