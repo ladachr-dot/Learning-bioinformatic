@@ -13,6 +13,8 @@
 * **Bioinformatics:** Biopython (Align), Sklearn
 * **Structure Prediction:**  ViennaRNA (RNAfold)
 
+**File:** `requirements.txt`
+
 ## 🚀 Steps
 
 **Dataset:** `AptaBench_dataset_v2.csv`
