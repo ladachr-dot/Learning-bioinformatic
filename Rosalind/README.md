@@ -1,25 +1,25 @@
 ### 🧬 Rosalind Bioinformatics Solutions
-Репозиторий содержит решения задач по биоинформатике с платформы Rosalind.
+This repository contains solutions to bioinformatics problems from the Rosalind platform.
 
-> https://rosalind.info/users/ladachernig/ - ссылка на мой аккаунт в проекте.
+> https://rosalind.info/users/ladachernig/ — link to my project profile.
 
-#### 📂 Структура проекта
+#### 📂 Project Structure
 
-1. string_algorithms/ (Алгоритмы на строках)
-   - Фундаментальная обработка текстовой биоинформации.
+1. string_algorithms/
+   - Fundamental processing of textual biological information.
 
-2. sequence_analysis/ (Анализ последовательностей)
-   - Статистика, сравнение данных и оценка мутаций.
+2. sequence_analysis/
+   - Statistics, data comparison, and mutation assessment.
 
-3. functional_bioinformatics/ (Функциональная биоинформатика)
-   - Интеграция данных и переход от генотипа к фенотипу.
+3. functional_bioinformatics/ 
+   - Data integration and the transition from genotype to phenotype.
 
-4. graph_theory/ (Теория графов)
-   - Математические модели для сборки геномов.
+4. graph_theory/ 
+   - Mathematical models for genome assembly.
 
-#### 🛠 Технологический стек
+#### 🛠 Tech Stack
 
-> Язык: Python 3.x
-> Библиотеки: Bio.SeqIO (Biopython) — для профессионального парсинга FASTA,
-              urllib, re — для работы с сетью и регулярными выражениями,
-              sys — для эффективного чтения потоков данных (stdin).
+> Language: Python 3.x
+> Libraries:: Bio.SeqIO (Biopython) — for professional FASTA parsing,
+              urllib, re — for networking and regular expressions,
+              sys — for efficient data stream reading (stdin).
