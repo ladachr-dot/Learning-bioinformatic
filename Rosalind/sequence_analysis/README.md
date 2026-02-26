@@ -1,17 +1,20 @@
-### 🧬 Анализ последовательностей (sequence_analysis)
+### 🧬 Sequence Analysis (`sequence_analysis`)
 
-Этот раздел посвящен статистическому анализу и сравнению генетических данных. Решения здесь демонстрируют понимание биологического смысла мутаций и методов поиска общих регуляторных элементов.
+This section is dedicated to statistical analysis and comparison of genetic data. The solutions here demonstrate an understanding of the biological significance of mutations and methods for identifying common regulatory elements.
 
-##### 📊 Реализованные задачи:
+##### 📊 Solved Tasks:
 
-1) HAMM (Counting Point Mutations)
-> Что делает: Вычисляет расстояние Хэмминга (количество различий) между двумя строками равной длины.
-> Зачем это нужно: Оценка эволюционного расстояния и интенсивности точечных мутаций.
+1. HAMM (Counting Point Mutations)
 
-2) GC (Computing GC Content)
-> Что делает: Определяет ID последовательности с самым высоким содержанием гуанина и цитозина.
-> Зачем это нужно: GC-состав напрямую влияет на температуру плавления ДНК и стабильность генома.
+> What it does: Calculates the Hamming distance (number of differences) between two strings of equal length.
+> Purpose: Estimating evolutionary distance and the intensity of point mutations.
 
-3) CONS (Consensus and Profile)
-> Что делает: Строит матрицу профиля и выводит консенсусную строку для набора ДНК.
-> Зачем это нужно: Используется для создания "логотипов" генов и поиска общих мотивов в промоторных областях.
+2. GC (Computing GC Content)
+
+> What it does: Identifies the sequence ID with the highest Guanine and Cytosine content.
+> Purpose: GC content directly affects the DNA melting temperature and genome stability.
+
+3. CONS (Consensus and Profile)
+
+> What it does: Constructs a profile matrix and generates a consensus string for a set of DNA sequences.
+> Purpose: Used for creating gene "logos" and searching for common motifs in promoter regions.
