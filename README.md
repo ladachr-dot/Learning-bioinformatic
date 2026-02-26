@@ -23,6 +23,6 @@ Currently, this repository contains all the tasks and projects that, in my opini
 
 📬 Text me: 
 > Email: ladachernig@gmail.com
-> Also you can find me here: [Rosalind](https://rosalind.info/users/ladachernig/) | [Kaggle](https://www.kaggle.com/vladachern)
+> You can also find me here: [Rosalind](https://rosalind.info/users/ladachernig/) | [Kaggle](https://www.kaggle.com/vladachern)
 
 Last update: 26 февраля 2026
