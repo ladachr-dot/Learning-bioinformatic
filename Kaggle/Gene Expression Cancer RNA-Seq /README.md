@@ -4,7 +4,7 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Latest-orange)
 ![Bioinformatics](https://img.shields.io/badge/Bioinformatics-Pipeline-green)
 
-> Kaggle Solution: https://www.kaggle.com/code/vladachern/gene-expression-cancer-rna-seq-solved/edit/run/297156476
+> Kaggle Solution: [https://www.kaggle.com/code/vladachern/gene-expression-cancer-rna-seq-solved/edit/run/297156476](https://www.kaggle.com/code/vladachern/gene-expression-cancer-rna-seq-solved)
 
 A project focused on tumor type classification based on RNA-Seq data. The pipeline includes extensive Feature Engineering and a comparison of classical ML models with SOTA solutions (XGBoost, LightGBM, MLP).
 
