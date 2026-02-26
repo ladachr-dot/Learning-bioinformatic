@@ -1,27 +1,28 @@
-# Learning Bioinformatic
+# Learning Bioinformatics
 
-### 📌 Обо мне
+### 📌 About me
 
-Я обучаюсь на факультете биотехнологии (направление биофармацевтика) на первом курсе в университете ИТМО. Я использую этот репозиторий для отработки навыков программирования на реальных биологических данных.
+I am a first-year Biotechnology student (specializing in Biopharmaceutics) at ITMO University. I use this repository to practice programming skills on real biological data.
 
-- C начала 2026 года я активно решаю Rosalind, чтобы научиться применять Python на практике.
-    Всего решены: 
-    - Весь Python Village (но он не показательный, поэтому решений с него в репозитории нет)
-    - Часть заданий Bioinformatic Stronghold.
-- С февраля 2026 года я прохожу стажировку в рамках университетской практики в Центре ИИ в Химии.
+* Since the beginning of 2026, I have been actively solving Rosalind problems to learn how to apply Python in practice. Completed so far:
+* The entire **Python Village** (not included in the repository as it's introductory).
+* Part of the **Bioinformatics Stronghold** track.
 
-Сейчас в репозитории — все задачи и проекты, которые, по моему мнению, лучше всего демонстрируют полученные мною навыки. 
+* **Since February 2026**, I have been doing an internship as part of my university practice at the **AI in Chemistry Center**.
 
-**Прогресс на февраль 2026:** ~25 решённых задач Rosalind и 1 проект в Kaggle
+Currently, this repository contains all the tasks and projects that, in my opinion, best demonstrate my acquired skills.
 
-Всего решены: 
-- Весь Python Village (но он не показательный, поэтому решений с него в репозитории нет)
-- Часть заданий Bioinformatic Stronghold.
+**Progress for February 2026:** ~25 Rosalind problems solved and 1 Kaggle project.
+
+**Total solved:**
+
+* The entire **Python Village** (not included in the repository as it's introductory).
+* Part of the **Bioinformatics Stronghold** track.
 
 ---
 
-📬 Контакты: 
+📬 Text me: 
 > Email: ladachernig@gmail.com
-> Профиль: [Rosalind](https://rosalind.info/users/ladachernig/) | [Kaggle](https://www.kaggle.com/vladachern)
+> Also you can find me here: [Rosalind](https://rosalind.info/users/ladachernig/) | [Kaggle](https://www.kaggle.com/vladachern)
 
-Обновлено: 22 февраля 2026
+Last update: 26 февраля 2026
