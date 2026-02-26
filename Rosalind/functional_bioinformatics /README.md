@@ -1,14 +1,11 @@
-### 🧬 Функциональная биоинформатика (functional_bioinformatics)
+### 🧬 Functional Bioinformatics (`functional_bioinformatics`)
 
-Раздел посвящен связи между генотипом и фенотипом. Здесь реализованы пайплайны трансляции и автоматизации работы с базами данных.
+> This section is dedicated to the relationship between genotype and phenotype. It features implemented translation pipelines and database automation.
 
-##### 📋 Реализованные задачи:
+#### 📋 Solved Tasks:
 
-1) PROT (Translating RNA into Protein)
-> Суть: Перевод РНК-кода в аминокислотную последовательность белка.
-> Логика: Обработка кодонов по 3 нуклеотида с учетом старт- и стоп-сигналов.
+1. **PROT (Translating RNA into Protein)**
+  * **Core:** Translating RNA code into a protein amino acid sequence. Logic: Processing codons in groups of 3 nucleotides, accounting for start and stop signals.
 
-2) MPRT (Finding a Protein Motif)
-> Суть: Мини-пайплайн для автоматического поиска мотивов.
-> Скрипт сам «ходит» на сервер UniProt, парсит FASTA и использует регулярные
->                       выражения с Lookahead для поиска сложных белковых паттернов.
+2. **MPRT (Finding a Protein Motif)**
+  * **Core:** A mini-pipeline for automated motif searching. The script accesses the UniProt server, parses FASTA files, and utilizes Lookahead regular expressions to find complex protein patterns.
