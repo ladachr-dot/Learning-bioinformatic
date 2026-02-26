@@ -1,29 +1,22 @@
-### 🧬 String Algorithms (Алгоритмы на строках)
+### 🧬 String Algorithms (`string_algorithms`)
 
-В этом разделе собраны решения задач, демонстрирующие навыки эффективной 
-обработки текстовой биоинформационной информации. Упор сделан на работу 
-с памятью, скорость алгоритмов и понимание биологических структур данных.
+This section contains solutions demonstrating skills in efficient processing of textual bioinformatics information. Emphasis is placed on memory management, algorithmic speed, and understanding biological data structures.
 
----
+##### 🛠 Solved Tasks:
 
-##### 🛠 Реализованные задачи:
+1. Motif and Pattern Searching
+SUBS (Finding a Motif in DNA)
 
-1) Поиск мотивов и паттернов
-  SUBS (Finding a Motif in DNA)
+> What it does: Finds all starting positions of a given substring within a sequence.
+> Features: Two implementation variants (basic `str.find` and regular expressions).
 
-> Что делает: Находит все позиции вхождения заданной подстроки в последовательность.
-> Особенности: Два варианта реализации (базовый str.find и регулярные выражения).
+2. Comparative Sequence Analysis
+LCSM (Finding a Shared Motif)
 
-2) Сравнительный анализ последовательностей
-  LCSM (Finding a Shared Motif)
+> What it does: Identifies the longest common substring for a dataset in FASTA format.
 
-> Что делает: Поиск самой длинной общей подстроки для набора данных в формате FASTA.
+3. String Transformation
+REVC (Complementing a Strand of DNA)
 
-3) Трансформация строк
-  REVC (Complementing a Strand of DNA)
-
-> Что делает: Формирует обратный комплемент цепи ДНК.
-> Суть: Реализация базового алгоритма реверсии и замены нуклеотидов
->       (A-T, C-G) без использования тяжелых библиотек, для понимания
->       основ работы с антипараллельными цепями.
-
+> What it does: Generates the reverse complement of a DNA strand.
+> Core: Implementation of the basic reversal and nucleotide substitution algorithm (A-T, C-G) without using heavy libraries, to understand the fundamentals of working with antiparallel strands.
