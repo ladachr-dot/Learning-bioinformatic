@@ -1,9 +1,9 @@
-### 🕸 Теория графов в биоинформатике (graph_theory)
+#### 🕸 Graph Theory in Bioinformatics (`graph_theory`)
 
-Математическая основа современной сборки геномов. Здесь решаются задачи по восстановлению последовательностей через графовые структуры.
+> Mathematical foundation of modern genome assembly. This section includes tasks focused on sequence reconstruction through graph structures.
 
-##### 📋 Реализованные задачи:
+##### 📋 Solved Tasks:
 
-1) GRPH (Overlap Graphs)
-> Суть: Построение списка смежности для графа перекрытий $O_3$.
-> Зачем это нужно: Это упрощенная модель того, как алгоритмы сборки (De novo assembly) склеивают короткие риды в целые хромосомы на основе их пересечений.
+1. **GRPH (Overlap Graphs)**
+    * **Core:** Constructing an adjacency list for an $O_3$ overlap graph.
+    * **Purpose:** This is a simplified model of how de novo assembly algorithms stitch short reads into complete chromosomes based on their overlaps.
