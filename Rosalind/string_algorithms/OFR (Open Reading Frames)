@@ -1,0 +1,21 @@
+from Bio import SeqIO
+
+results = set()
+
+for record in SeqIO.parse(input(), "fasta"):
+    variants = [record.seq, record.seq.reverse_complement()]
+
+    for seq in variants:
+        for frame in range(3):
+            prot = seq[frame:].translate()
+
+            for i in range(len(prot)):
+                if prot[i] == "M":
+                    fragment = prot[i:]
+                    stop_pos = fragment.find("*")
+
+                    if stop_pos != -1:
+                        results.add(str(fragment[:stop_pos]))
+
+for orf in results:
+    print(orf)

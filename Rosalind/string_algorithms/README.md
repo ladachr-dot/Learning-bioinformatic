@@ -20,3 +20,8 @@ REVC (Complementing a Strand of DNA)
 
 > What it does: Generates the reverse complement of a DNA strand.
 > Core: Implementation of the basic reversal and nucleotide substitution algorithm (A-T, C-G) without using heavy libraries, to understand the fundamentals of working with antiparallel strands.
+
+4. ORF Finder
+(ORF) Open Reading Frames
+
+> This script identifies all potential protein strings derived from Open Reading Frames (ORFs) in a DNA sequence, covering all six reading frames.
