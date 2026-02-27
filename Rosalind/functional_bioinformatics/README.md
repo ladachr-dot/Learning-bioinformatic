@@ -9,3 +9,6 @@
 
 2. **MPRT (Finding a Protein Motif)**
    * **Core:** A mini-pipeline for automated motif searching. The script accesses the UniProt server, parses FASTA files, and utilizes Lookahead regular expressions to find complex protein patterns.
+
+3. **MRNA (Inferring mRNA from Protein)**
+   * **Core:** Counting the total number of different RNA strings from which the protein could have been translated.
