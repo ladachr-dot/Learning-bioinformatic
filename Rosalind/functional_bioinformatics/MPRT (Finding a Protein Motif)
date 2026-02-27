@@ -1,0 +1,58 @@
+'''
+Description: Автоматизированный поиск белкового мотива N-гликозилирования.
+Скрипт сам скачивает FASTA-данные с UniProt по ID и ищет паттерн N{P}[ST]{P}.
+'''
+
+import urllib.request, io, re, time
+from Bio import SeqIO
+
+def find_protein():
+    pattern = r'(?=(N[^P][ST][^P]))' # Lookahead для поиска перекрывающихся мотивов
+    
+    try:
+        # Ввод названия файла с айдишками (например, input.txt)
+        with open(input("Введите имя файла: ").strip(), 'r') as f:
+            ids = [line.strip() for line in f if line.strip()]
+        
+        for protein_id in ids:
+            try:
+                # UniProt URL (убираем добавочные индексы после подчеркивания)
+                clean_id = protein_id.split('_')[0]
+                url = f"https://rest.uniprot.org/uniprotkb/{clean_id}.fasta"
+                
+                req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                with urllib.request.urlopen(req) as resp:
+                    fasta_data = resp.read().decode('utf-8')
+                
+                record = SeqIO.read(io.StringIO(fasta_data), "fasta")
+                sequence = str(record.seq)
+                
+                matches = [str(m.start() + 1) for m in re.finditer(pattern, sequence)]
+                
+                if matches:
+                    print(protein_id)
+                    print(' '.join(matches))
+                
+                time.sleep(0.5) # Anti-DDoS пауза
+            except:
+                continue
+    except FileNotFoundError:
+        print("Ошибка: Файл не найден.")
+
+if __name__ == "__main__":
+    find_protein()
+
+'''
+Пример простого ввода:
+  A2Z669
+  B5ZC00
+  P07204_TRBM_HUMAN
+  P20840_SAG1_YEAST
+Пример простого вывода:
+  B5ZC00
+  85 118 142 306 395
+  P07204_TRBM_HUMAN
+  47 115 116 382 409
+  P20840_SAG1_YEAST
+  79 109 135 248 306 348 364 402 485 501 614
+'''
