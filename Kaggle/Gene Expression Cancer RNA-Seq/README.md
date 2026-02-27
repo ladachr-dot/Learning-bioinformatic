@@ -31,7 +31,7 @@ To handle high-dimensional data (20k+ features), a multi-stage process was appli
 
 ---
 
-### 🤖 Модели и результаты
+### 🤖 Models and results
 The project compares the following models:
 | Model | Accuracy | F1-Score |
 | :--- | :--- | :--- |
